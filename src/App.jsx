@@ -1,3 +1,4 @@
+import Banner from "./Component/Banner/Banner"
 import NavBar from "./Component/NavBar/NavBar"
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
   return (
     <>
    <NavBar/>
+   <Banner/>
+
       
     </>
   )

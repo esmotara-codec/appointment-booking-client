@@ -34,7 +34,7 @@ const NavBar = () => {
 
     return (
         <div >
-            <nav className='flex flex-row flex-wrap justify-between w-[90%] mx-auto md:gap-10 md:p-10 py-3'>
+            <nav className='container mx-auto flex flex-row flex-wrap justify-between  md:gap-10 md:p-10 py-3'>
                 <div className='relative flex gap-2 items-center ' onClick={() => setMenuOpen(!menuOpen)}>
                     {
                         menuOpen ?
