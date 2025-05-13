@@ -5,12 +5,14 @@ import MyBookings from "../pages/MyBookings";
 import Blogs from "../pages/Blogs";
 import Contact from "../pages/Contact";
 import LawerDetails from "../LawerDetails/LawerDetails";
+import ErrorElement from "../ErrorPage/ErrorElement";
 
 export const router = createBrowserRouter([
 
     {
         path: '/',
         element: <App />,
+        errorElement: <ErrorElement/>,
         children: [
             {
                 path: '/',
@@ -33,8 +35,12 @@ export const router = createBrowserRouter([
                 path: '/lawerdetails/:id',
                 element: <LawerDetails />,
                 loader: () => fetch('../lawersData.json'),
-            }
-        ]
+            },
+             
+
+            
+        ],
+
     }
 ]
 
