@@ -1,8 +1,8 @@
 import { OctagonAlert } from 'lucide-react';
-import React from 'react';
 import { RiRegisteredLine } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
 import { useAppointments } from '../ContextApi/AppointmentContext';
+import { toast } from 'react-toastify';
 
 const LawerDetails = () => {
     const lawData = useLoaderData();
@@ -15,7 +15,8 @@ const LawerDetails = () => {
 
     const handleAddAppointment = () => {
         addAppointment(singleLawer);
-        toast.success('Appointment added successfully');
+        // toast.success('Appointment added successfully');
+       
     }
 
 
@@ -95,18 +96,8 @@ const LawerDetails = () => {
                     onClick={() => handleAddAppointment(singleLawer)}
                      className='btn bg-[#0EA106] w-full border-none mt-5 md:mt-10 text-white md:text-xl px-10 py-4 rounded-full mb-3  '>Book Appointment Now</button>
 
-
-
-
-
-
                 </div>
-
-
-
             </div>
-
-
         </div>
     );
 };

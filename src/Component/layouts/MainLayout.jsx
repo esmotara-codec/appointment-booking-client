@@ -9,7 +9,7 @@ const MainLayout = () => {
         <div className="bg-white" >
         <NavBar/>
         <Outlet/>
-        <ToastContainer/>
+        
         <Footer/>
             
         </div>
