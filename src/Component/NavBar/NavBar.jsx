@@ -33,7 +33,7 @@ const NavBar = () => {
     const links = navigationData.map((route) => <DynamicLink key={route.id} route={route} />)
 
     return (
-        <div className='bg-white ' >
+        <div className='bg-white text-black ' >
             <nav className='container mx-auto flex flex-row flex-wrap justify-between  md:gap-10 md:p-10 py-3'>
                 <div className='relative flex gap-2 items-center ' onClick={() => setMenuOpen(!menuOpen)}>
                     {

@@ -8,7 +8,8 @@
     "image": "https://randomuser.me/api/portraits/women/44.jpg",
     "availability": ["Sunday", "Wednesday", "Thursday"],
     "status": "Available",
-    "consultationFee": 350
+    "consultationFee": 350,
+    "description": "Sophia is a corporate law specialist with over a decade of experience helping startups and enterprises navigate complex business regulations and mergers."
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "image": "https://randomuser.me/api/portraits/men/32.jpg",
     "availability": ["Monday", "Tuesday", "Thursday"],
     "status": "Available",
-    "consultationFee": 500
+    "consultationFee": 500,
+    "description": "James is a fearless criminal defense attorney known for high-stakes courtroom wins and tireless advocacy for justice."
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "image": "https://randomuser.me/api/portraits/women/65.jpg",
     "availability": ["Sunday", "Monday", "Friday"],
     "status": "Available",
-    "consultationFee": 300
+    "consultationFee": 300,
+    "description": "Aisha is a compassionate family lawyer guiding clients through divorce, custody, and marriage issues with care and professionalism."
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "image": "https://randomuser.me/api/portraits/men/74.jpg",
     "availability": ["Tuesday", "Wednesday", "Thursday"],
     "status": "Available",
-    "consultationFee": 400
+    "consultationFee": 400,
+    "description": "Liam focuses on immigration law, helping clients secure visas, citizenship, and asylum with a high success rate."
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "image": "https://randomuser.me/api/portraits/women/29.jpg",
     "availability": ["Monday", "Wednesday", "Friday"],
     "status": "Available",
-    "consultationFee": 600
+    "consultationFee": 600,
+    "description": "Olivia is an expert in intellectual property law, securing patents and copyrights for inventors and creatives globally."
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "image": "https://randomuser.me/api/portraits/men/23.jpg",
     "availability": ["Sunday", "Tuesday", "Friday"],
     "status": "Available",
-    "consultationFee": 450
+    "consultationFee": 450,
+    "description": "Ethan handles real estate transactions and disputes, protecting clients in residential and commercial property deals."
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "image": "https://randomuser.me/api/portraits/women/12.jpg",
     "availability": ["Monday", "Wednesday", "Saturday"],
     "status": "Available",
-    "consultationFee": 320
+    "consultationFee": 320,
+    "description": "Grace supports both employers and workers in employment law cases, including wrongful termination and discrimination."
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "image": "https://randomuser.me/api/portraits/men/56.jpg",
     "availability": ["Sunday", "Thursday", "Saturday"],
     "status": "Available",
-    "consultationFee": 540
+    "consultationFee": 540,
+    "description": "Daniel is a strategic tax consultant, defending clients during audits and helping reduce tax liabilities legally."
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "image": "https://randomuser.me/api/portraits/women/17.jpg",
     "availability": ["Tuesday", "Friday", "Saturday"],
     "status": "Available",
-    "consultationFee": 310
+    "consultationFee": 310,
+    "description": "Isabella is passionate about environmental law, representing communities and NGOs in sustainability-related cases."
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "image": "https://randomuser.me/api/portraits/men/81.jpg",
     "availability": ["Sunday", "Monday", "Wednesday"],
     "status": "Available",
-    "consultationFee": 490
+    "consultationFee": 490,
+    "description": "Noah is a bankruptcy expert who helps individuals and businesses recover financially through legal restructuring."
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "image": "https://randomuser.me/api/portraits/women/54.jpg",
     "availability": ["Monday", "Thursday", "Friday"],
     "status": "Available",
-    "consultationFee": 375
+    "consultationFee": 375,
+    "description": "Maya is dedicated to victims of medical negligence, achieving justice in complex malpractice lawsuits."
   },
   {
     "id": 12,
@@ -129,6 +140,7 @@
     "image": "https://randomuser.me/api/portraits/men/40.jpg",
     "availability": ["Tuesday", "Wednesday", "Friday"],
     "status": "Available",
-    "consultationFee": 390
+    "consultationFee": 390,
+    "description": "Benjamin is a civil rights advocate who defends individuals in discrimination and constitutional violation cases."
   }
 ]
