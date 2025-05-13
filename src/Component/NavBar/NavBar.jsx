@@ -33,7 +33,7 @@ const NavBar = () => {
     const links = navigationData.map((route) => <DynamicLink key={route.id} route={route} />)
 
     return (
-        <div >
+        <div className='bg-white ' >
             <nav className='container mx-auto flex flex-row flex-wrap justify-between  md:gap-10 md:p-10 py-3'>
                 <div className='relative flex gap-2 items-center ' onClick={() => setMenuOpen(!menuOpen)}>
                     {
@@ -51,7 +51,7 @@ const NavBar = () => {
                         <img src={logo}
                             alt="Law-Logo"
                             className='w-[30px] md:w-[50px] lg:w-full lg:h-full' />
-                        <h3 className='font-bold text-xl md:text-3xl'>Law.BD</h3>
+                        <h3 className='font-bold text-xl md:text-3xl text-black'>Law.BD</h3>
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@ const NavBar = () => {
                     {links}
 
                 </ul>
-                <button className='btn border bg-[#0EA106] text-white text-sm md:text-xl py-2 px-3 md:px-7 rounded-full md:py-7'>Contact Now</button>
+                <button className='btn border border-none bg-[#0EA106] text-white text-sm md:text-xl py-2 px-3 md:px-7 rounded-full md:py-7'>Contact Now</button>
             </nav>
 
         </div>

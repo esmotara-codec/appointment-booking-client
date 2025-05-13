@@ -2,7 +2,8 @@ import bannerImg from './../../assets/banner-img-1.png';
 
 const Banner = () => {
     return (
-        <div className="container mx-auto md:p-10 py-3">
+        <div className='bg-white'>
+            <div className="container mx-auto bg-white md:p-10 py-3" >
             <div
                 className="relative h-[600px] flex flex-wrap justify-center items-center bg-amber-300 rounded-2xl bg-cover bg-center bg-no-repeat overflow-hidden"
                 style={{ backgroundImage: `url(${bannerImg})` }}
@@ -20,6 +21,7 @@ const Banner = () => {
                     </p>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
