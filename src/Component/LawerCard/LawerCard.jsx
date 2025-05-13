@@ -1,7 +1,8 @@
+import { Link } from "react-router";
 
 
 const LawerCard = ({ lawer }) => {
-    const { name, image, speciality, status, licenseNumber, experience } = lawer;
+    const { name, image, speciality, status, licenseNumber, experience , id} = lawer;
     console.log("lawer :", lawer);
     return (
         <div className="border border-gray-300 rounded-4xl md:p-6">
@@ -21,7 +22,8 @@ const LawerCard = ({ lawer }) => {
                             <p> License No:{licenseNumber}</p>
                         </div>
 
-                        <button className="btn bg-white border w-full  border-[#176AE5]/20 text-center text-[#176AE5] px-10 py-2 rounded-full shadow-none ">View details</button>
+                       <Link to={`/lawerdetails/${id}`}> 
+                        <button className="btn bg-white border w-full  border-[#176AE5]/20 text-center text-[#176AE5] px-10 py-2 rounded-full shadow-none ">View details</button></Link>
 
                     </div>
                 </div>

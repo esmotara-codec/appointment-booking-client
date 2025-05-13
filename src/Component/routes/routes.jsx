@@ -4,29 +4,35 @@ import Home from "../pages/Home";
 import MyBookings from "../pages/MyBookings";
 import Blogs from "../pages/Blogs";
 import Contact from "../pages/Contact";
+import LawerDetails from "../LawerDetails/LawerDetails";
 
 export const router = createBrowserRouter([
 
     {
         path: '/',
-        element: <App/>,
-        children:[
+        element: <App />,
+        children: [
             {
                 path: '/',
-                element: <Home/>,
+                element: <Home />,
                 loader: () => fetch('lawersData.json'),
             },
             {
                 path: '/my-bookings',
-                element: <MyBookings/>,
+                element: <MyBookings />,
             },
             {
                 path: '/blog',
-                element: <Blogs/>,
+                element: <Blogs />,
             },
             {
                 path: '/contact',
-                element: <Contact/>,
+                element: <Contact />,
+            },
+            {
+                path: '/lawerdetails/:id',
+                element: <LawerDetails />,
+                loader: () => fetch('../lawersData.json'),
             }
         ]
     }
