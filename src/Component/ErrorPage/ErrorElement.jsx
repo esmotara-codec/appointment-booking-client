@@ -1,9 +1,11 @@
 import React from 'react';
 import errorLogo from './../../assets/errorpage.jpg'
+import NavBar from '../NavBar/NavBar';
 
 const ErrorElement = () => {
     return (
-        <div className='bg-white h-screen text-black'> 
+        <div className='bg-white min-h-screen text-black'> 
+            <NavBar/>
             <div className=' container mx-auto  md:p-10 py-3  text-center items-center '>
               <div className='flex flex-col justify-center items-center  gap-3'>
                   <img src={errorLogo} alt="" />

@@ -26,11 +26,9 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blogs />,
+                loader: () => fetch('../blogsData.json'),
             },
-            {
-                path: '/contact',
-                element: <Contact />,
-            },
+           
             {
                 path: '/lawerdetails/:id',
                 element: <LawerDetails />,

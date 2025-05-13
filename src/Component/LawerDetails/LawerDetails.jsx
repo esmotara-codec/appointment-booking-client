@@ -2,14 +2,21 @@ import { OctagonAlert } from 'lucide-react';
 import React from 'react';
 import { RiRegisteredLine } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
+import { useAppointments } from '../ContextApi/AppointmentContext';
 
 const LawerDetails = () => {
     const lawData = useLoaderData();
     const { id } = useParams();
+    const { addAppointment } = useAppointments();
     const singleLawer = lawData.find(lawer => lawer.id === parseInt(id));
     const { name, image, speciality, licenseNumber, experience, description, availability, consultationFee } = singleLawer;
     // console.log(id);
     // console.log(singleLawer);
+
+    const handleAddAppointment = () => {
+        addAppointment(singleLawer);
+        toast.success('Appointment added successfully');
+    }
 
 
 
@@ -84,7 +91,9 @@ const LawerDetails = () => {
                    </div>
                     </div>
 
-                    <button className='btn bg-[#0EA106] w-full border-none mt-5 md:mt-10 text-white md:text-xl px-10 py-4 rounded-full mb-3  '>Book Appointment Now</button>
+                    <button 
+                    onClick={() => handleAddAppointment(singleLawer)}
+                     className='btn bg-[#0EA106] w-full border-none mt-5 md:mt-10 text-white md:text-xl px-10 py-4 rounded-full mb-3  '>Book Appointment Now</button>
 
 
 
