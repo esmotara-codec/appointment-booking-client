@@ -5,6 +5,7 @@ import { useAppointments } from '../ContextApi/AppointmentContext'
 import { toast } from 'react-toastify'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { addAppoinment } from '../utils'
 
 const LawerDetails = () => {
 	const lawData = useLoaderData()
@@ -29,7 +30,7 @@ const LawerDetails = () => {
 	} = singleLawer
 
 	const handleAddAppointment = () => {
-		  addAppo
+		  addAppoinment(singleLawer)
 	
 		toast.success('Appointment added successfully')
 	}

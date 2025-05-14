@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from './../../assets/logo-footer.png';
+import logo  from './../../assets/logo.png'
 import DynamicLink from './DynamicLink';
 import { Menu, X } from 'lucide-react';
 import { navigationData } from './navigationData';
