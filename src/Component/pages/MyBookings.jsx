@@ -2,16 +2,12 @@ import { useContext } from 'react'
 import { AppointmentContext } from '../ContextApi/AppointmentContext'
 
 const MyBookings = () => {
-	const { appointments, cancelAppointment } = useContext(AppointmentContext)
-	console.log(appointments)
+	// const { appointments, cancelAppointment } = useContext(AppointmentContext)
+	// console.log(appointments)
 
 	return (
 		<div className='min-h-screen bg-gray-50 py-8 px-4'>
 			<div className='max-w-md mx-auto'>
-				<h1 className='text-2xl font-bold text-gray-800 mb-6 text-center'>
-					My Today Appointments
-				</h1>
-
 				{appointments.length === 0 ? (
 					<div className='bg-white rounded-lg shadow p-6 text-center'>
 						<div className='text-gray-400 text-4xl mb-3'>📅</div>
@@ -21,6 +17,9 @@ const MyBookings = () => {
 					</div>
 				) : (
 					<div className='space-y-4'>
+						<h1 className='text-2xl font-bold text-gray-800 mb-6 text-center'>
+					My Today Appointments
+				</h1> 
 						{appointments.map((appointment) => (
 							<div
 								key={appointment.id}

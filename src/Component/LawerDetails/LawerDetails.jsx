@@ -9,7 +9,7 @@ import { useEffect } from 'react'
 const LawerDetails = () => {
 	const lawData = useLoaderData()
 	const { id } = useParams()
-	const { addAppointment } = useAppointments()
+
 	const [singleLawer, setSingleLawer] = useState({})
 
 	useEffect(() => {
@@ -29,7 +29,8 @@ const LawerDetails = () => {
 	} = singleLawer
 
 	const handleAddAppointment = () => {
-		addAppointment(singleLawer)
+		  addAppo
+	
 		toast.success('Appointment added successfully')
 	}
 

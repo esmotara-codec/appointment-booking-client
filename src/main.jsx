@@ -8,9 +8,8 @@ import { ToastContainer } from 'react-toastify'
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<AppointmentProvider>
-			<RouterProvider router={router}></RouterProvider>
-		</AppointmentProvider>
+		
+		<RouterProvider router={router}></RouterProvider>	
 		<ToastContainer />
 	</StrictMode>,
 )
