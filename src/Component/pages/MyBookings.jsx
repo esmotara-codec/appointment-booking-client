@@ -1,9 +1,23 @@
-import { useContext } from 'react'
-import { AppointmentContext } from '../ContextApi/AppointmentContext'
+import { useEffect, useState } from 'react'
+
+import { getAppoinment } from '../utils';
 
 const MyBookings = () => {
-	// const { appointments, cancelAppointment } = useContext(AppointmentContext)
-	// console.log(appointments)
+	const [appointments, setAppointments] = useState([]);
+	
+
+	useEffect(() => {
+		const bookedAppoinments = getAppoinment();
+		setAppointments(bookedAppoinments);
+
+
+
+	}, []);
+	
+
+	const cancelAppointment = (id) => {
+		setAppointments(appointments.filter((appointment) => appointment.id !== id))
+	}
 
 	return (
 		<div className='min-h-screen bg-gray-50 py-8 px-4'>
