@@ -15,11 +15,10 @@ const Footer = () => {
 		</div>
 		
 		{/* Navlink */}
-
-		<div className='p-4'>
+		<div className=' p-2 md:p-4'>
 			<ul className='flex flex-row justify-center items-center md:gap-5'>
 				{
-					navigationData.map((route) => <li key={route.id}><NavLink 
+					navigationData.map((route) => <li key={route.id} className='text-[10px] md:text-xl' ><NavLink 
 					to={route.path} 
 					className={({ isActive}) => `block px-3 py-2 text-gray-200 rounded-md hover:bg-[#0EA106]/60 ' ${ isActive ? ' font-semibold' : " "} ` }
 
@@ -33,14 +32,14 @@ const Footer = () => {
 		 <div className='border border-dashed border-gray-500 rounded-2xl  '></div>
 		 {/* Social Media Links */}
 		<div className='p-5'>
-			<ul className='flex flex-row justify-center items-center md:gap-5'>
+			<ul className='flex flex-row justify-center items-center gap-2  md:gap-5 '>
 				{
-					mediaLinks.map((links) => <li key={links.id}><NavLink 
+					mediaLinks.map((links) => <li key={links.id} ><NavLink 
 					to={links.link} 
-					className={({ isActive}) => `block text-gray-200 rounded-md hover:bg-red-200 ' ${ isActive ? ' font-semibold' : " "} ` }
+					className={({ isActive}) => `block text-gray-200  rounded-md hover:bg-red-200 ' ${ isActive ? ' font-semibold' : " "} ` }
 
 					>
-					<img src={links.image} alt="" className='w-[28px] '/></NavLink></li>)
+					<img src={links.image} alt="" className= ' w-[20px] md:w-[28px]  '/></NavLink></li>)
 				}
 				
 			</ul>

@@ -29,19 +29,19 @@ const servicesDAta = [
 const Services = () => {
 
     return (
-        <div className=' container mx-auto  items-center  text-black mb-4 p-14 '>
-            <h1 className=" font-bold text-5xl mb-2 text-center">We Provide Best Law Services</h1>
-            <p className="mb-2 p-4 text-center">
+        <div className=' container mx-auto  items-center  text-black p-5 mb-4 md:p-14 '>
+            <h1 className=" font-bold text-2xl md:text-5xl mb-2 text-center">We Provide Best Law Services</h1>
+            <p className="mb-2 md:p-4 text-[12px] font-normal text-center">
                 Our platform connects you with verified, experienced Lawyers across various specialities — all at your convenience.
             </p>
-            <div className="grid grid-cols-4 gap-3 ">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-3 ">
                 {
                     servicesDAta.map((service) =>
-                        <div className='bg-gray-100 items-center px-24 text-black mb-4 border border-gray-300 rounded-2xl p-8 '
+                        <div className='bg-gray-100 items-center  p-4 md:px-24 text-black mb-4 border border-gray-300 rounded-2xl md:p-8 '
                             key={service.id}>
                             <img src={service.icon} alt="Service images" className="w-16 h-16" />
-                            <h1 className="font-bold text-3xl">{service.count}</h1>
-                            <p className="text-gray-500">{service.label}</p>
+                            <h1 className="font-bold text-xl  md:text-3xl">{service.count}</h1>
+                            <p className="text-gray-500 text-sm">{service.label}</p>
                         </div>)
                 }
 
