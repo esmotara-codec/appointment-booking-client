@@ -11,7 +11,7 @@ const ErrorElement = () => {
                   <img src={errorLogo} alt="" />
                 <h1 className='text-red-400 text-3xl font-bold '>404 Page Not Found</h1>
                 <p className='text-gray-600'>Opps the page you are looking for doesn't exits.</p>
-                <button className='btn bg-[#0EA106] text-white border   border-[#0EA106]/20 text-center  text-xl font-semibold px-10 py-2 rounded-s-md shadow-none '>Go Back Home</button>
+                <button className='btn bg-[#0EA106] text-white border border-[#0EA106]/20 text-center  text-xl font-semibold px-10 py-2 rounded-s-md shadow-none '>Go Back Home</button>
 
 
               </div>

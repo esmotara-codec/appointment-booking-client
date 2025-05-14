@@ -13,12 +13,13 @@ const Blog = () => {
                 Let’s explore some basic concept that will make you a good developer
             </p>
 
-            {blogsData.map((blog) => (
+            {blogsData.map((blog , index) => (
                 <div
                     key={blog.id}
-                    className="bg-gray-100 shadow-sm rounded-lg p-6 mb-6 border border-gray-200"
+                    className="bg-gray-100 text-gray-500 shadow-sm rounded-lg p-6 mb-6 border border-gray-200"
                 >
-                    <h2 className="  text-xl font-semibold text-gray-800 mb-2">
+                    <span>#{index + 1}</span>
+                    <h2 className=" text-xl font-semibold text-gray-700 mb-2">
                         {blog.question}
                     </h2>
                     <div className='border border-dashed border-gray-300 rounded-2xl  '></div>

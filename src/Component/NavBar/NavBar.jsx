@@ -2,31 +2,10 @@ import { useState } from 'react';
 import logo from './../../assets/logo-footer.png';
 import DynamicLink from './DynamicLink';
 import { Menu, X } from 'lucide-react';
+import { navigationData } from './navigationData';
 
 
-const navigationData = [
-    {
-        id: 1,
-        name: "Home",
-        path: "/",
-    },
-    {
-        id: 2,
-        name: "My-Bookings",
-        path: "/my-bookings",
-    },
 
-    {
-        id: 3,
-        name: "Blogs",
-        path: "/blog",
-    },
-    {
-        id: 4,
-        name: "Contact Us",
-        path: "/contact",
-    },
-];
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -55,7 +34,7 @@ const NavBar = () => {
                     </div>
                 </div>
 
-                <ul className='hidden lg:flex   text-xl items-center '>
+                <ul className='hidden lg:flex text-xl items-center '>
                     {links}
 
                 </ul>
