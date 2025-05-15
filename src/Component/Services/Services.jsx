@@ -1,3 +1,5 @@
+import CountUp from "react-countup";
+
 const servicesDAta = [
     {
         "id": 1,
@@ -40,7 +42,14 @@ const Services = () => {
                         <div className='bg-gray-100 items-center p-4 md:px-20 text-black mb-4 border border-gray-300 rounded-2xl md:p-8 '
                             key={service.id}>
                             <img src={service.icon} alt="Service images" className="w-16 h-16" />
-                            <h1 className="font-bold text-xl  md:text-3xl">{service.count}</h1>
+                            <h1 className="font-bold text-xl  md:text-3xl">
+                                <CountUp
+                                    start={50}
+                                    end={parseInt(service.count)}
+                                    duration={2}
+                                    suffix="+"
+                                />
+                            </h1>
                             <p className="text-gray-500 text-sm">{service.label}</p>
                         </div>)
                 }
