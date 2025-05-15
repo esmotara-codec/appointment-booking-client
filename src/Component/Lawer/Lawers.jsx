@@ -35,7 +35,7 @@ const Lawers = ({ lawersPromise }) => {
 						onClick={() => setViewAll(!viewAll)}
 						className='btn border border-none md:w-2/12 bg-[#0EA106] text-white text-sm md:text-xl px-6 md:px-10 rounded-full md:py-7 '
 					>
-						View All{' '}
+						View All Lawers{' '}
 					</button>
 				</div>
 			</div>

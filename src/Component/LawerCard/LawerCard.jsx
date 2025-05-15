@@ -2,8 +2,7 @@ import { RiRegisteredLine } from 'react-icons/ri'
 import { Link } from 'react-router'
 
 const LawerCard = ({ lawer }) => {
-	const { name, image, speciality, status, licenseNumber, experience, id } =
-		lawer
+	const { name, image, speciality, status, licenseNumber, experience, id } =lawer
 
 	return (
 		<div className='border border-gray-300 rounded-4xl md:p-6 p-3'>

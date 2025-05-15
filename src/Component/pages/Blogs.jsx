@@ -18,7 +18,7 @@ const Blog = () => {
                     key={blog.id}
                     className="bg-gray-100 text-gray-500 shadow-sm rounded-lg p-6 mb-6 border border-gray-200"
                 >
-                    <span>#{index + 1}</span>
+                  
                     <h2 className=" text-xl font-semibold text-gray-700 mb-2">
                         {blog.question}
                     </h2>

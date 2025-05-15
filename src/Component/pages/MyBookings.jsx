@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import { getAppoinment, removeAppoinments } from '../utils';
+import { Link } from 'react-router';
 
 const MyBookings = () => {
 	const [appointments, setAppointments] = useState([]);
@@ -23,16 +24,22 @@ const MyBookings = () => {
 				{appointments.length === 0 ? (
 					<div className='bg-white rounded-lg shadow p-6 text-center'>
 						<div className='text-gray-400 text-4xl mb-3'>📅</div>
-						<h2 className='text-xl font-semibold text-gray-700'>
-							You have no appointments booked
-						</h2>
+						<div className='flex flex-col md:gap-4'>
+							<h2 className='text-[24px] font-semibold text-gray-800'>
+								You have not booked any appointments yet
+							</h2>
+							<p className='text-gray-500 text-sm text-center'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
+							<Link to={'/'}> <button className='btn bg-[#0EA106] text-white border border-[#0EA106]/20 text-center  md:text-[18px] font-semibold px-5 md:px-8 py-4 rounded-s-md shadow-none '>Book an Appoinment</button>
+
+							</Link>
+						</div>
 					</div>
 				) : (
 					<div className='space-y-4'>
 						<h1 className='text-2xl font-bold text-gray-800 mb-6 text-center'>
-							My Today Appointments
+							My Today Booked Appointments
 						</h1>
-						<p>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
+						<p className='text-gray-500 text-sm text-center'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
 						{appointments.map((appointment) => (
 							<div
 								key={appointment.id}
