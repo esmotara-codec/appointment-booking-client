@@ -1,13 +1,15 @@
 import { OctagonAlert } from 'lucide-react'
 import { RiRegisteredLine } from 'react-icons/ri'
 import { useLoaderData, useParams } from 'react-router'
-import { useAppointments } from '../ContextApi/AppointmentContext'
 import { toast } from 'react-toastify'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { addAppoinment } from '../utils'
+import { useNavigate } from 'react-router-dom';
+
 
 const LawerDetails = () => {
+	const navigate = useNavigate();
 	const lawData = useLoaderData()
 	const { id } = useParams()
 
@@ -30,9 +32,15 @@ const LawerDetails = () => {
 	} = singleLawer
 
 	const handleAddAppointment = () => {
-		  addAppoinment(singleLawer)
-	
-		toast.success('Appointment added successfully')
+		const response = addAppoinment(singleLawer)
+		if (response) {
+			toast.success('Appointment added successfully')
+			navigate('/my-bookings');
+		}
+		else {
+			toast.error('Appointment already added')
+		}
+
 	}
 
 	return (

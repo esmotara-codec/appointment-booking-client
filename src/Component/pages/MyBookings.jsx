@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react'
-
-import { getAppoinment } from '../utils';
+import { toast } from 'react-toastify'
+import { getAppoinment, removeAppoinments } from '../utils';
 
 const MyBookings = () => {
 	const [appointments, setAppointments] = useState([]);
-	
 
 	useEffect(() => {
 		const bookedAppoinments = getAppoinment();
 		setAppointments(bookedAppoinments);
-
-
-
 	}, []);
-	
 
-	const cancelAppointment = (id) => {
-		setAppointments(appointments.filter((appointment) => appointment.id !== id))
+
+	const handleCancelAppointment = async (id) => {
+		await removeAppoinments(id)
+		await setAppointments(getAppoinment());
+		toast.info('Appointment canceled successfully');
 	}
 
 	return (
@@ -26,15 +24,15 @@ const MyBookings = () => {
 					<div className='bg-white rounded-lg shadow p-6 text-center'>
 						<div className='text-gray-400 text-4xl mb-3'>📅</div>
 						<h2 className='text-xl font-semibold text-gray-700'>
-							You have no appointments
+							You have no appointments booked
 						</h2>
 					</div>
 				) : (
 					<div className='space-y-4'>
 						<h1 className='text-2xl font-bold text-gray-800 mb-6 text-center'>
-					My Today Appointments
-				</h1> 
-				<p>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
+							My Today Appointments
+						</h1>
+						<p>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
 						{appointments.map((appointment) => (
 							<div
 								key={appointment.id}
@@ -43,21 +41,21 @@ const MyBookings = () => {
 								<div className=' flex flex-col '>
 									<div className='flex flex-row justify-between mb-4  ' >
 
-									<div className='text-gray-700'>	
-										<h4 className='text-black text-[16px] font-semibold'>{appointment.name}</h4>
-										<p className='text-gray-500'>{appointment.speciality}</p>
-									</div>
-		
-									<div>
-										<p className='font-medium text-gray-500 items-center '>
-											Appointment Fee: {appointment.consultationFee} Taka
-										</p>
-									</div>
+										<div className='text-gray-700'>
+											<h4 className='text-black text-[16px] font-semibold'>{appointment.name}</h4>
+											<p className='text-gray-500'>{appointment.speciality}</p>
+										</div>
+
+										<div>
+											<p className='font-medium text-gray-500 items-center '>
+												Appointment Fee: {appointment.consultationFee} Taka
+											</p>
+										</div>
 									</div>
 
-								
+
 									<button
-										onClick={() => cancelAppointment(appointment.id)}
+										onClick={() => handleCancelAppointment(appointment.id)}
 										className=' w-full bg-white border border-[#FF0000] hover:bg-red-600 text-[#FF0000] px-3 py-1 rounded-lg  text-sm transition'
 									>
 										Cancel Appointment
