@@ -3,6 +3,7 @@ import logo  from './../../assets/logo.png'
 import DynamicLink from './DynamicLink';
 import { Menu, X } from 'lucide-react';
 import { navigationData } from './navigationData';
+import { Link } from 'react-router';
 
 
 
@@ -26,12 +27,14 @@ const NavBar = () => {
                         {links}
                     </ul>
 
-                    <div className='flex items-center justify-center gap-2 md:gap-3'>
+                   
+                       <Link to="/" className='flex items-center justify-center gap-2 md:gap-3'>
                         <img src={logo}
                             alt="Law-Logo"
                             className='w-[30px] md:w-[50px] lg:w-full lg:h-full' />
                         <h3 className='font-bold text-xl md:text-3xl text-black'>Law.BD</h3>
-                    </div>
+                       </Link>
+                    
                 </div>
 
                 <ul className='hidden lg:flex text-xl items-center '>
