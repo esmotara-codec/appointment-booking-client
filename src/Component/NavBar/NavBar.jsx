@@ -33,8 +33,7 @@ const NavBar = () => {
                             alt="Law-Logo"
                             className='w-[30px] md:w-[50px] lg:w-full lg:h-full' />
                         <h3 className='font-bold text-xl md:text-3xl text-black'>Law.BD</h3>
-                       </Link>
-            
+                       </Link>           
                 </div>
 
                 <ul className='hidden lg:flex text-xl items-center '>
