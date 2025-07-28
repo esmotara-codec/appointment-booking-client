@@ -32,8 +32,7 @@ const NavBar = () => {
             {links}
           </ul>
 
-          <Link 
-          to="/"
+          <Link  to="/"
             className="flex items-center justify-center gap-2 md:gap-3"
           >
             <img
