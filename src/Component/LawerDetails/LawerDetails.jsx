@@ -126,7 +126,7 @@ const LawerDetails = () => {
 							Lawer Available Today
 						</button>
 					</div>
-					<div className='border border-none bg-[#FFA000]/15 text-[#FFA000] text-[16px] rounded-2xl  px-5 py-1 '>
+					<div className='border border-none bg-[#FFA000]/15 text-[#FFA000] text-[16px] rounded-2xl px-5 py-1 '>
 						<div className='flex flex-row  flex-wrap gap-1 items-center '>
 							<OctagonAlert size={20} />
 							<p className='text-sm '>
