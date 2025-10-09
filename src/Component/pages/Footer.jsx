@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router';
 import { navigationData } from '../NavBar/navigationData';
 import footerLogo from './../../assets/logo-footer.png';
-import { mediaLinks } from '../SocialMediaLinks/MediaLinks';
+import { mediaLinks } from './../SocialMediaLinks/mediaLinks';
 
 
 
